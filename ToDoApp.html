@@ -1,0 +1,34 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <div id="Mydiv" class="Header">
+           <h2>To Do List</h2>
+           <input type="text" id="myInput" placeholder="Title">
+           <button onclick="AddNew()" class="addBtn">Add</button>
+        </div>
+        <ul>
+            <li>To Learn Javascript</li>
+            <li>To Complete the CCNA course</li>
+            <li>To be more patient</li>
+            <li>To walk my cat</li>
+            <li>To cook dinner tonight</li>
+        </ul>
+
+        <script>
+            // Create a "close" button and append it to each list item
+            var myToDoList = document.getElementsByTagName("LI");
+            var i; 
+            for (i=0; i < myToDoList.length; i++){
+                var span = document.createElement("SPAN");
+                var txt = document.createTextNode("\u00D7")
+                span.className = "close"
+                span.appendChild(txt);
+                myToDoList[i].appendChild(span);
+            } 
+        </script>
+    </body>
+</html>
