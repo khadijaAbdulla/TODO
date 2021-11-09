@@ -7,8 +7,8 @@
     <body>
         <div id="Mydiv" class="Header">
            <h2>To Do List</h2>
-           <input type="text" id="myInput" placeholder="Title">
-           <button onclick="AddNew()" class="addBtn">Add</button>
+           <input type="text" id="myInput">
+           <button type ="button" onclick="addNeWTask()" class="addBtn">Add</button>
         </div>
         <ul>
             <li>To Learn Javascript</li>
@@ -29,6 +29,18 @@
                 span.appendChild(txt);
                 myToDoList[i].appendChild(span);
             } 
+
+            //Add a new task to the list
+            /*function addNeWTask(){
+            var i;
+            var input = document.getElementById(myInput);
+                for (i = 0; i < myToDoList.length; i++) {
+                    var newTask = document.createElement("LI");
+                    var txt = document.createTextNode(input);
+                    newTask.appendChild(txt);
+                    myToDoList[i].appendChild(newTask);
+                }
+            }*/
         </script>
     </body>
 </html>
