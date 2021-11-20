@@ -1,0 +1,38 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div id="Mydiv" class="Header">
+            <h2>To Do List</h2>
+            <input type="text" id="myInput">
+            <button type="button" onclick="addNeWTask()" class="addBtn">Add</button>
+        </div>
+        <ul>
+            <li>To Learn Javascript</li>
+            <li>To Complete the CCNA course</li>
+            <li>To be more patient</li>
+            <li>To walk my cat</li>
+            <li>To cook dinner tonight</li>
+        </ul>
+        <script>
+            function addNeWTask(){
+                var input= document.getElementById("myInput").value;
+                console.log(input);
+                var myToDoList = document.getElementsByTagName("LI");
+                var i;
+                for (i = 0; i <= myToDoList.length; i++) {
+                    if (i == myToDoList.length){
+                        console.log("Starting to append");
+                        var newTask = document.createElement("LI");
+                        //newTask.appendChild(input);
+                        //myToDoList[i].appendChild(newTask);
+                        console.log("appended");
+                    }
+                }
+
+            }
+        </Script>
+    </body>
+</html>
